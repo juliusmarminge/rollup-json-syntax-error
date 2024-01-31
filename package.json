@@ -1,0 +1,31 @@
+{
+  "name": "buncheejson",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/es/index.js",
+  "types": "dist/es/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/es/index.d.ts",
+        "default": "./dist/es/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bunchee"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.13",
+    "bunchee": "4.4.3",
+    "typescript": "5.3.3"
+  }
+}
